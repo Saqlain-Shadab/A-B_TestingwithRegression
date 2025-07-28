@@ -1,71 +1,65 @@
-###  📈 Advertisement Campaign through A/B Testing & Regression Analysis 
+## Advertisement Campaign through A/B Testing & Regression Analysis
 
-**Project Overview**  
-This project evaluates and optimizes digital advertising performance using **A/B testing and regression analysis**. It aims to identify whether **Facebook** or **Google AdWords** offers better results in terms of clicks, conversions, and cost-efficiency. These insights enable data-driven decisions for **strategic budget allocation**.
+### Overview  
+This project analyzes digital advertising performance using **A/B testing** and **regression modeling**. It compares **Facebook** and **Google AdWords** to determine which platform offers better performance in terms of **clicks, conversions**, and **cost-efficiency**. The goal is to enable **data-driven budget allocation** to maximize return on investment (ROI).
 
----
+### Background  
+As part of a marketing agency’s analytics team, our objective was to evaluate the effectiveness of ad platforms based on key performance indicators (KPIs). This allowed stakeholders to identify the most cost-effective platform for future campaigns.
 
-**📝 Background**  
-As part of the strategic team at a marketing agency, our core objective was to **maximize return on investment (ROI)** for client ad campaigns. This project focused on identifying the more effective advertising platform based on **clicks, conversions, and cost-efficiency**.
+### Objective  
+- Determine which advertising platform performs better across:
+  - **Conversion Rate**
+  - **Click-Through Rate (CTR)**
+  - **Cost per Click (CPC)**  
+- Recommend budget allocation strategies based on platform performance
 
----
+### Data Description  
+The dataset contains **daily ad performance data** for both platforms from **January 1 to December 31, 2019** (365 entries). Each row includes:
 
-**🎯 Objective**  
+- `Date`: Daily timestamp  
+- `Ad Views`: Number of impressions  
+- `Ad Clicks`: Number of user clicks  
+- `Ad Conversions`: Successful conversions  
+- `Cost per Ad`: Daily spend per platform  
+- `CTR (Click-Through Rate)`: Clicks ÷ Views  
+- `Conversion Rate`: Conversions ÷ Clicks  
+- `CPC (Cost per Click)`: Cost ÷ Clicks
 
-- Determine which platform—**Facebook** or **Google AdWords**—delivers:
-  - Higher **conversions**
-  - Better **click-through rates (CTR)**
-  - Greater **cost-effectiveness**
+### Methodology  
 
----
+#### 1. Data Cleaning  
+- Formatted date fields  
+- Handled missing and inconsistent entries  
 
-**📊 Data Description**  
-The analysis is based on **daily campaign performance data** collected throughout **2019**. Each row represents one day’s metrics for both platforms and includes the following features:
+#### 2. Exploratory Data Analysis (EDA)  
+- Visualized daily trends in views, clicks, and conversions  
+- Compared distributions across platforms  
+- Identified seasonal or platform-specific performance patterns  
 
--  **Date**: Daily records from Jan 1 – Dec 31, 2019  
--  **Ad Views**: Total number of impressions  
--  **Ad Clicks**: Number of user clicks  
--  **Ad Conversions**: Successful conversions from clicks  
--  **Cost per Ad**: Daily expenditure per platform  
--  **Click-Through Rate (CTR)**: Clicks ÷ Impressions  
--  **Conversion Rate**: Conversions ÷ Clicks  
--  **Cost per Click (CPC)**: Cost ÷ Clicks  
+#### 3. Statistical Testing  
+- Conducted **t-tests** to compare Facebook vs. Google AdWords performance  
+- Measured **correlation** between ad clicks and conversions  
+- Performed **cointegration testing** to analyze long-term spending-conversion relationships  
 
-➡️ The dataset contains **365 entries**—one for each day of the year.
----
-**🔍 Methodology**  
+#### 4. Predictive Modeling  
+- Built a **linear regression model** to predict conversions from clicks  
+- Evaluated model using **R² score** and **Mean Squared Error (MSE)**  
 
-1. **Data Cleaning**
-   - Standardized date formats  
-   - Handled missing or inconsistent data
+### Key Insights  
+- **Facebook outperformed** Google AdWords in:
+  - **Conversion Rate**
+  - **Cost per Click**
+- **Budget Recommendation**:
+  - Redirecting more ad spend to Facebook may lead to **higher ROI**
+- **Seasonal Effects**:
+  - Conversion performance fluctuated throughout the year, suggesting campaign timing is important
 
-2. **Exploratory Data Analysis (EDA)**
-   - Visualized trends in clicks and conversions  
-   - Identified seasonal and platform-specific patterns
+### Resources Used  
+- **Python**: Data processing and modeling  
+- **Pandas, NumPy**: Data manipulation  
+- **Matplotlib, Seaborn**: Visualization  
+- **SciPy**: Hypothesis testing  
+- **Scikit-learn**: Regression modeling  
 
-3. **Statistical Analysis**
-   - Conducted **t-tests** to compare performance metrics  
-   - Analyzed correlations between clicks and conversions  
-   - Used **cointegration tests** to assess long-term relationships between ad spend and conversions
-
-4. **Predictive Modeling**
-   - Built a **linear regression model** to predict conversions from clicks  
-   - Evaluated using **R²** and **Mean Squared Error (MSE)**
----
-**📈 Key Insights**  
-- **Platform Performance**:  
-  Facebook consistently outperformed Google AdWords with **higher conversion rates** and **lower CPC**
-
-- **Budget Optimization**:  
-  Results suggest that shifting more of the ad budget to Facebook could improve overall **campaign ROI**
-
-- **Seasonal Trends**:  
-  Conversion performance varied across the year, indicating that **campaign timing** should align with seasonal behavior
----
-
-**💻 Technologies Used**  
-- **Python**: For end-to-end data analysis and modeling  
-- **Pandas & NumPy**: Data cleaning and numerical operations  
-- **Matplotlib & Seaborn**: Visualizing distributions and trends  
-- **SciPy**: Hypothesis testing and statistical analysis  
-- **Scikit-learn**: Linear regression modeling and evaluation
+### Conclusion  
+This project demonstrates how A/B testing and regression analysis can be applied to real-world advertising data. The insights generated support smarter budget allocation and help improve overall campaign efficiency.
