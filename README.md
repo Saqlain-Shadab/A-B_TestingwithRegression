@@ -1,4 +1,7 @@
-### 📈 Advertisement Campaign through A/B Testing & Regression Analysis
+<div align="center"> 
+  
+## 📈 Advertisement Campaign with A/B Testing & Regression Analysis
+</div>
 
 **Problem Statement :**  
 This project evaluates and optimizes digital advertising performance using **A/B testing** and **regression analysis**. It compares **Facebook** and **Google AdWords** in terms of clicks, conversions, and cost-efficiency, enabling data-driven decisions for strategic budget allocation.
